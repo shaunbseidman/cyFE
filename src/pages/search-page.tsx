@@ -13,28 +13,28 @@ const SearchPage = () => {
   const { dnsData, dnsError, fetchDNSData } = useDNS();
   const [shouleClearDNS, setShouldClearDNS] = useState(false);
 
-  const handleSubmit = (ipAddress: string) => {
+  const handleSubmit = (ipAddress: string): void => {
     fetchWhoisData(ipAddress);
   };
 
-  const handleDNSSubmit = (dns: string) => {
+  const handleDNSSubmit = (dns: string): void => {
     fetchDNSData(dns);
   }
 
-  const handleClear = () => {
+  const handleClear = (): void => {
     setShouldClear(true);
   };
 
-  const handleCleared = () => {
+  const handleCleared = (): void  => {
     setShouldClear(false);
   };
 
 
-  const handleDNSClear = () => {
+  const handleDNSClear = (): void => {
     setShouldClearDNS(true);
   };
 
-  const handleDNSCLEARED = () => {
+  const handleDNSCLEARED = (): void => {
     setShouldClearDNS(false);
   };
 
@@ -54,7 +54,7 @@ const SearchPage = () => {
       <DNSSearchResults
         dnsData={dnsData}
         error={dnsError}
-        shouldClear={shouldClear}
+        shouldClear={shouleClearDNS}
         onCleared={handleDNSCLEARED}
       />
     </div>
