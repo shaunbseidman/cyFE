@@ -1,0 +1,12 @@
+@import '../../styles/mixins.scss';
+
+.results {
+  &-error {
+    @include body();
+    color: $brandError;
+  }
+
+  .result {
+    @include body();
+  }
+}
