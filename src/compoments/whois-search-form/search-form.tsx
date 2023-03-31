@@ -7,7 +7,7 @@ interface SearchFormProps {
   onClear: () => void;
 }
 
-const SearchForm = ({ onSubmit, onClear }: SearchFormProps) => {
+const WhoIsSearchForm = ({ onSubmit, onClear }: SearchFormProps) => {
   const [ipAddress, setIpAddress] = useState('');
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -57,4 +57,4 @@ const SearchForm = ({ onSubmit, onClear }: SearchFormProps) => {
   );
 };
 
-export default SearchForm;
+export default WhoIsSearchForm;

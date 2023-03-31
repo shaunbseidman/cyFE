@@ -9,7 +9,7 @@ interface SearchResultsProps {
   onCleared: () => void;
 }
 
-const SearchResults = ({ whoisData, error, shouldClear, onCleared }: SearchResultsProps) => {
+const WhoIsSearchResults = ({ whoisData, error, shouldClear, onCleared }: SearchResultsProps) => {
   const [dataCleared, setDataCleared] = useState(false);
 
   useEffect(() => {
@@ -67,4 +67,4 @@ const SearchResults = ({ whoisData, error, shouldClear, onCleared }: SearchResul
   );
 };
 
-export default SearchResults;
+export default WhoIsSearchResults;
