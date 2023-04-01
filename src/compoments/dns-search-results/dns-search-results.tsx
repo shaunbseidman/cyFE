@@ -33,7 +33,7 @@ const DNSSearchResults = ({ dnsData, error, shouldClear, onCleared }: DNSSearchR
     <div className='results'>
       {error ? (
         <div>
-          <pre className='results-error'>{JSON.stringify(error, null, 2)}</pre>
+          <pre className='results-error'>Error, is your application online?</pre>
         </div>
       ) : dnsData ? (
         <div className='dns-results-result'>

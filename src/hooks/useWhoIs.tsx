@@ -17,7 +17,7 @@ const useWhois = (): UseWhoisResult => {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await fetch(`http://localhost:3001/ipwho.is/${ipAddress}`);
+      const response = await fetch(`http://localhost:8080/ipwho.is/${ipAddress}`);
       const data = await response.json();
       setWhoisData(data);
       setIsLoading(false);
