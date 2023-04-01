@@ -28,7 +28,6 @@ const DNSSearchResults = ({ dnsData, error, shouldClear, onCleared }: DNSSearchR
   if (!dnsData && !error) {
     return null;
   }
-  console.log(dnsData, 'foobar')
   return (
     <div className='results'>
       {error ? (
