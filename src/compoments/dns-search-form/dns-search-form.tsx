@@ -7,20 +7,20 @@ interface DNSSearchFormProps {
 }
 
 const DNSSearchForm = ({ onSubmit, onClear }: DNSSearchFormProps) => {
-  const [ipAddress, setIpAddress] = useState('');
+  const [dnsAddress, setDNSAddpress] = useState('');
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    onSubmit(ipAddress);
+    onSubmit(dnsAddress);
   };
 
   const handleClear = () => {
-    setIpAddress('');
+    setDNSAddpress('');
     onClear();
   };
 
   // be super duper sure and check for whitespace
-  const isDisabled = ipAddress.trim() === '';
+  const isDisabled = dnsAddress.trim() === '';
 
   return (
     <>
@@ -30,8 +30,8 @@ const DNSSearchForm = ({ onSubmit, onClear }: DNSSearchFormProps) => {
           className='search-form-input'
           placeholder='Enter your DNS here'
           type="text"
-          value={ipAddress}
-          onChange={(event) => setIpAddress(event.target.value)}
+          value={dnsAddress}
+          onChange={(event) => setDNSAddpress(event.target.value)}
         />
         <div className='search-form-button-wrapper'>
           {/* hacky way to ensure no emtpy string searches are requested leading to errrors, disable button till text inputed */}
