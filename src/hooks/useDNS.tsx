@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { DNSInterface } from '../models/dns-interface';
 
 interface DNSResult {
@@ -17,7 +17,7 @@ const useDNS = (): DNSResult => {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await fetch(`http://localhost:3001/dns/${dnsAddress}`);
+      const response = await fetch(`http://localhost:8080/dns/${dnsAddress}`);
       const data = await response.json();
       setDNSData(data);
       setIsLoading(false);

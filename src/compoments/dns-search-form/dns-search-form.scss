@@ -1,0 +1,43 @@
+@import '../../styles/mixins.scss';
+
+.search-form {
+  @include mqViewportSm {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-button {
+    @include button();
+    @include mqViewportSm {
+      margin-right: $remSpacing3;
+    }
+    margin-right: 0px;
+
+    &-wrapper {
+      @include mqViewportSm {
+        display: block;
+      }
+      display: flex;
+      justify-content: space-around;
+    }
+
+    &.clear, &.submit {
+     &.disabled {
+      pointer-events: none;
+      color: $brandBlue2;
+     } 
+    }
+  }
+
+  &-input {
+    @include mqViewportSm {
+      margin-bottom: 0px;
+      margin-right: $remSpacing3;
+    }
+    margin-bottom: $remSpacing3;
+  }
+
+  &-header {
+    @include header2();
+  }
+}

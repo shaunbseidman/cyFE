@@ -34,8 +34,7 @@ const WhoIsSearchResults = ({ whoisData, error, shouldClear, onCleared }: Search
       {/* handle actual API error - could be logged but in the interest of time */}
       {error ? (
         <div>
-          <p className='results-error'>Error:</p>
-          <pre className='results-error'>{JSON.stringify(error, null, 2)}</pre>
+          <pre className='results-error'>Error, is your application online?</pre>
         </div>
       ) : whoisData?.success ? (
         // successful res bool, this could be broken out into its own compoment but time
