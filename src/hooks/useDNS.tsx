@@ -17,7 +17,9 @@ const useDNS = (): DNSResult => {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await fetch(`http://localhost:8080/dns/${dnsAddress}`);
+      // for local dev use localhost:8080, commented out resposne variable is deployed container
+      // const response = await fetch(`http://localhost:8080/dns/${dnsAddress}`);
+      const response = await fetch(`https://cyderes-sbe3pib3ca-uc.a.run.app/dns/${dnsAddress}`);
       const data = await response.json();
       setDNSData(data);
       setIsLoading(false);
